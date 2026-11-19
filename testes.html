@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f7f6">
+  <title>Plano de Testes | Distribuidora Al Capone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="test-page">
+  <header class="topbar">
+    <div class="brand" aria-label="Distribuidora Al Capone">
+      <div class="brand-mark" aria-hidden="true">A</div>
+      <div>
+        <div class="brand-name">Distribuidora <span class="brand-subname">Al Capone</span></div>
+        <div class="brand-caption">Bebidas em geral</div>
+      </div>
+    </div>
+    <nav class="topbar-links" aria-label="Navegação principal"><a href="index.html">Cadastro</a><a href="testes.html" aria-current="page">Plano de testes</a></nav>
+  </header>
+  <main>
+    <section class="test-section test-page-section" aria-labelledby="test-heading">
+      <div class="section-heading">
+        <p class="eyebrow">Qualidade e validação</p>
+        <h1 id="test-heading">Plano de teste</h1>
+        <p>Cenários para verificar as regras e a experiência da tela de cadastro.</p>
+      </div>
+      <div class="test-card">
+        <div class="test-meta">
+          <div><span>Nome do sistema</span><strong>Sistema de Recursos Humanos (SRH)</strong></div>
+          <div><span>Funcionalidade</span><strong>Tela de Cadastro de Funcionário</strong></div>
+          <div><span>Responsável</span><strong>Aluno(a): __________________</strong></div>
+          <div><span>Navegadores</span><strong>Chrome, Firefox e Microsoft Edge</strong></div>
+          <div><span>Dispositivos</span><strong>Desktop (1920×1080) e mobile responsivo</strong></div>
+          <div><span>Execução</span><strong>Preencher resultado e status durante o teste</strong></div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>ID</th><th>Cenário de teste</th><th>Passos para reproduzir</th><th>Resultado esperado</th><th>Status</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>CT-01</td><td>Cadastro com sucesso</td>
+                <td>1. Preencher todos os campos com dados válidos.<br>2. Selecionar cargo e turno.<br>3. Clicar em “Salvar cadastro”.</td>
+                <td>Exibe “Funcionário cadastrado com sucesso”, adiciona o registro à lista e limpa o formulário.</td>
+                <td><span class="status">A ser testado</span></td>
+              </tr>
+              <tr>
+                <td>CT-02</td><td>Nome obrigatório vazio</td>
+                <td>1. Deixar “Nome completo” em branco.<br>2. Preencher os demais campos.<br>3. Tentar salvar.</td>
+                <td>Impede o cadastro e exibe “O campo Nome é obrigatório” junto ao campo.</td>
+                <td><span class="status">A ser testado</span></td>
+              </tr>
+              <tr>
+                <td>CT-03</td><td>E-mail inválido</td>
+                <td>1. Informar “joao.silva” no e-mail.<br>2. Preencher os demais campos.<br>3. Tentar salvar.</td>
+                <td>Impede o cadastro e exibe uma mensagem de e-mail inválido.</td>
+                <td><span class="status">A ser testado</span></td>
+              </tr>
+              <tr>
+                <td>CT-04</td><td>Seleção de turno</td>
+                <td>1. Selecionar “Manhã”.<br>2. Em seguida, selecionar “Noite”.</td>
+                <td>Apenas um turno fica selecionado; “Noite” substitui “Manhã”.</td>
+                <td><span class="status">A ser testado</span></td>
+              </tr>
+              <tr>
+                <td>CT-05</td><td>Salário negativo</td>
+                <td>1. Informar “-1500” no campo de salário.<br>2. Preencher os demais campos.<br>3. Tentar salvar.</td>
+                <td>Impede o cadastro e exibe “O salário deve ser maior que zero”.</td>
+                <td><span class="status">A ser testado</span></td>
+              </tr>
+              <tr>
+                <td>CT-06</td><td>Cargo não selecionado</td>
+                <td>1. Manter o cargo como “Selecione um cargo”.<br>2. Preencher os demais campos.<br>3. Tentar salvar.</td>
+                <td>Impede o cadastro e solicita a seleção de um cargo.</td>
+                <td><span class="status">A ser testado</span></td>
+              </tr>
+              <tr>
+                <td>CT-07</td><td>Turno não selecionado</td>
+                <td>1. Manter o turno sem seleção.<br>2. Preencher os demais campos.<br>3. Tentar salvar.</td>
+                <td>Impede o cadastro e solicita a seleção de um turno.</td>
+                <td><span class="status">A ser testado</span></td>
+              </tr>
+              <tr>
+                <td>CT-08</td><td>Telefone inválido</td>
+                <td>1. Informar um telefone com menos de 10 dígitos.<br>2. Preencher os demais campos.<br>3. Tentar salvar.</td>
+                <td>Impede o cadastro e informa que o telefone deve ter DDD e número válidos.</td>
+                <td><span class="status">A ser testado</span></td>
+              </tr>
+              <tr>
+                <td>CT-09</td><td>Botão limpar campos</td>
+                <td>1. Preencher alguns campos.<br>2. Clicar em “Limpar campos”.</td>
+                <td>Apaga os valores preenchidos e remove as mensagens de validação.</td>
+                <td><span class="status">A ser testado</span></td>
+              </tr>
+              <tr>
+                <td>CT-10</td><td>Layout responsivo</td>
+                <td>1. Abrir a tela em desktop 1920×1080.<br>2. Redimensionar para largura mobile.<br>3. Conferir os campos e a tabela.</td>
+                <td>Campos ficam utilizáveis sem corte; a matriz pode ser rolada horizontalmente em telas estreitas.</td>
+                <td><span class="status">A ser testado</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p class="test-footnote">Registre o resultado real e atualize o status de cada caso após executar os testes.</p>
+    </section>
+    <footer>Distribuidora Al Capone · Sistema fictício para fins acadêmicos</footer>
+  </main>
+</body>
+</html>

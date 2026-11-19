@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f7f6">
+  <title>Cadastro de Funcionários | Distribuidora Al Capone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand" aria-label="Distribuidora Al Capone">
+      <div class="brand-mark" aria-hidden="true">A</div>
+      <div>
+        <div class="brand-name">Distribuidora <span class="brand-subname">Al Capone</span></div>
+        <div class="brand-caption">Bebidas em geral</div>
+      </div>
+    </div>
+    <nav class="topbar-links" aria-label="Navegação principal"><a href="index.html" aria-current="page">Cadastro</a><a href="testes.html">Plano de testes</a></nav>
+  </header>
+
+  <main>
+    <section class="company-banner" aria-label="Distribuidora Al Capone, bebidas em geral">
+      <div class="company-banner-copy">
+        <p>Bebidas em geral</p>
+        <h2>Distribuidora<br>Al Capone</h2>
+        <span>Qualidade, variedade e o melhor preço!</span>
+      </div>
+    </section>
+    <section class="page-heading" aria-labelledby="page-title">
+      <p class="eyebrow">Recursos humanos <span aria-hidden="true">/</span> Nossa equipe</p>
+      <h1 id="page-title">Cadastro de funcionário</h1>
+      <p class="intro">Adicione uma nova pessoa à equipe. Preencha os dados abaixo para iniciar o processo de integração.</p>
+    </section>
+
+    <form class="form-card" id="employee-form" novalidate>
+      <div class="form-header">
+        <div>
+          <h2>Dados do novo colaborador</h2>
+          <p>Os campos marcados com asterisco são obrigatórios.</p>
+        </div>
+        <div class="required-note"><span>*</span> Obrigatório</div>
+      </div>
+
+      <fieldset>
+        <legend><span class="legend-number">01</span>Dados pessoais</legend>
+        <div class="form-grid">
+          <div class="field full">
+            <label for="full-name">Nome completo <span aria-hidden="true">*</span></label>
+            <input id="full-name" name="name" type="text" autocomplete="name" placeholder="Ex.: Joana Silva Santos" required aria-describedby="name-error">
+            <p class="field-error" id="name-error" aria-live="polite"></p>
+          </div>
+          <div class="field full">
+            <label for="address">Endereço <span aria-hidden="true">*</span></label>
+            <input id="address" name="address" type="text" autocomplete="street-address" placeholder="Rua, número, bairro e cidade" required aria-describedby="address-error">
+            <p class="field-error" id="address-error" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="email">E-mail <span aria-hidden="true">*</span></label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="nome@empresa.com.br" required aria-describedby="email-error">
+            <p class="field-error" id="email-error" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="phone">Telefone <span aria-hidden="true">*</span></label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(11) 99999-9999" required aria-describedby="phone-error">
+            <p class="field-error" id="phone-error" aria-live="polite"></p>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend><span class="legend-number">02</span>Informações profissionais</legend>
+        <div class="form-grid">
+          <div class="field">
+            <label for="role">Cargo <span aria-hidden="true">*</span></label>
+            <div class="select-wrap">
+              <select id="role" name="role" required aria-describedby="role-error">
+                <option value="">Selecione um cargo</option>
+              </select>
+            </div>
+            <p class="field-error" id="role-error" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="salary">Salário mensal <span aria-hidden="true">*</span></label>
+            <div class="salary-wrap">
+              <span aria-hidden="true">R$</span>
+              <input id="salary" name="salary" type="text" inputmode="decimal" autocomplete="off" placeholder="0,00" required aria-describedby="salary-hint salary-error">
+            </div>
+            <p class="field-hint" id="salary-hint">Informe o valor em reais. Ex.: 3.500,00</p>
+            <p class="field-error" id="salary-error" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="shift">Turno <span aria-hidden="true">*</span></label>
+            <div class="select-wrap">
+              <select id="shift" name="shift" required aria-describedby="shift-error">
+                <option value="">Selecione um turno</option>
+                <option value="Manhã">Manhã · 06h às 12h</option>
+                <option value="Tarde">Tarde · 12h às 18h</option>
+                <option value="Noite">Noite · 18h às 00h</option>
+              </select>
+            </div>
+            <p class="field-error" id="shift-error" aria-live="polite"></p>
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="form-footer">
+        <div class="secure-note"><span aria-hidden="true">▣</span> Seus dados são tratados com confidencialidade.</div>
+        <div class="actions">
+          <button class="button button-secondary" id="clear-button" type="reset">Limpar campos</button>
+          <button class="button button-primary" type="submit">Salvar cadastro <span aria-hidden="true">→</span></button>
+        </div>
+      </div>
+      <div class="notice success" id="form-notice" role="status" aria-live="polite"></div>
+    </form>
+
+    <section class="employees-card" aria-labelledby="employees-heading">
+      <div class="employees-top">
+        <h2 id="employees-heading">Cadastros desta sessão</h2>
+        <span class="count-badge" id="employee-count" aria-label="0 funcionários cadastrados">0</span>
+      </div>
+      <p class="empty-state" id="empty-state">Os funcionários cadastrados aparecerão aqui.</p>
+      <ul class="employee-list" id="employee-list" aria-live="polite"></ul>
+    </section>
+    <footer>Distribuidora Al Capone · Sistema fictício para fins acadêmicos</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

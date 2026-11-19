@@ -1,0 +1,16 @@
+{
+  "name": "distribuidora-jhf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "jest --runInBand"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^30.5.2",
+    "jest-environment-jsdom": "^30.5.2"
+  }
+}
